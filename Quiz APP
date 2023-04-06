@@ -1,0 +1,60 @@
+
+
+  import React, { useState } from 'react';
+
+function ReviewList({ reviews }) {
+  const [replies, setReplies] = useState([]);
+
+  const handleSubmitReply = (event, Index) => {
+    event.preventDefault();
+    const newReply = {
+      comment: replies[Index],
+      replies: []
+    };
+    setReplies([...replies]);
+    reviews[Index].replies.push(newReply);
+  };
+// const handleSubmitReply = (event, index) => {
+  //   event.preventDefault();
+  //   const newReply = {
+  //     comment: replies[index],
+  //     replies: []
+  //   };
+  //   setReplies([...replies ]);
+  //   reviews[index].replies.push(newReply);
+  //   setReplies(prevReplies => {
+  //     const newReplies = [...prevReplies];
+  //     newReplies[index] = '';
+  //     return newReplies;
+  //   });
+  // };
+  const handleReplyChange = (event, reviewIndex) => {
+    const newReplies = [...replies];
+    newReplies[reviewIndex] = event.target.value;
+    setReplies(newReplies);
+  };
+
+  return (
+    <div className='reviews-container'>
+      {reviews.map((review, index) => (
+        <div className='review-box' key={index}>
+          <p className='review'>{review.comment}</p>
+          <form onSubmit={(event) => handleSubmitReply(event, index)}>
+            <label>Reply:</label>
+            <input type='text' className='reply-input' value={replies[index] || ''} onChange={(event) => handleReplyChange(event, index)} />
+            <button type='submit' className='reply-button'>Submit Reply</button>
+          </form>
+          {review.replies && review.replies.length > 0 && (
+            <div className='replies-container'>
+              <ReviewList reviews={review.replies} />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default ReviewList;
+
+ 
