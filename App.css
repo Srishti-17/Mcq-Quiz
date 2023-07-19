@@ -1,0 +1,180 @@
+
+.quesProgressBar{
+  width: 100%;
+    font-size: 40px;
+}
+.correct-answer:hover{
+  background-color: rgb(207, 77, 120);
+}
+.Sorry{
+  font-size:20px;
+  color:red;
+}
+
+.Correct{
+  font-size:20px;
+  color:red;
+}
+.question-category{
+  margin-top: auto;
+}
+.question{
+  margin-top: auto;
+}
+.btn {
+  width: 134px;
+  padding: 14px;
+  background-color: lightgrey;
+  }
+
+.option-btn{
+  box-shadow: 0px 0px 4px 1px rgb(128,123,123);
+  padding:5px;
+  font-size: 23px;
+  font-weight: bold;
+  border-radius: 3px;
+  border:none;
+  outline:none;
+  transition: 0.3s;
+  margin:5px;
+  min-height: 30px;
+  background-color: white;
+}
+.option-btn:hover{
+  background-color: skyblue;
+  color:white;
+}
+.question-text{
+  font-size: 21px;
+    font-weight: 400;
+}
+#question-number{
+  margin-right: 5px;
+}
+.checked{
+  background-color: skyblue;
+  color:white;
+  box-shadow: 3px 3px 4px 1px rgb(78,69,78);
+}
+.Question{
+  margin:8px;
+  box-shadow: 0px 0px 10px 1px #a2a3a3;
+  border-radius: 5px;
+  padding:5px;
+  font-size: 600;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.heading-txt{
+  color:black;
+  font-size: 30px;
+  font-weight: bold;
+  margin:10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#next-button{
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
+  transition: 0.2s;
+  /* width: 100px; */
+  /* position: absolute; */
+  /* bottom: 15px; */
+  border: none;
+  border-color: skyblue;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px rgb(127,109,109);
+  margin-bottom: 17px;
+}
+.diffilculty{
+  color: darkgoldenrod;
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 78%;
+}
+#next-button:active{
+  box-shadow: none;
+}
+.answer-message{
+  font-size: 19px;
+    color: red;
+    font-weight: bold;
+}
+.show-score{
+ 
+  top:30%;
+  font-size: 40px;
+  text-align: center;
+}
+.answerProgressBar{
+  
+}
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* min-height: 392px; */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px 1px #333;
+  overflow: hidden;
+  /* padding: 29px; */
+  position: relative;
+  width: 44%;
+  margin: 0 auto;
+  margin-top: 71px;
+}
+.option-container{
+  display: flex;
+  flex-direction: column;
+  margin:6px 4px;
+  width:100%;
+  padding: 10px;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cont2 {
+  width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 150px;
+  background-color: yellow;
+}
